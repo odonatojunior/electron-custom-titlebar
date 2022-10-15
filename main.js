@@ -9,7 +9,6 @@ function createWindow() {
     height: 600,
     frame: false,
     darkTheme: true,
-    // transparent: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -23,7 +22,6 @@ function createWindow() {
     mainWindow.webContents.openDevTools({
       mode: 'detach',
     })
-    mainWindow.setAlwaysOnTop(true)
   }
 }
 

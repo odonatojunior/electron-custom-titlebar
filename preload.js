@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
 const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  setTitle: (title) => ipcRenderer.send('set-title', title),
   closeButton: () => ipcRenderer.send('close-button'),
   minimizeButton: () => ipcRenderer.send('minimize-button'),
   maximizeButton: () => ipcRenderer.send('maximize-button'),
